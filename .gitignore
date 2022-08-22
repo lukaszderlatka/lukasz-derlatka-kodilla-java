@@ -6,12 +6,16 @@ build/
 !**/src/test/**/build/
 **/out/
 **/build/
+**/library/
+**/shape/
+**/weather/
+
 
 ### STS ###
 .apt_generated
 .classpath
 .factorypath
-.project
+.projectq
 .settings
 .springBeans
 .sts4-cache
