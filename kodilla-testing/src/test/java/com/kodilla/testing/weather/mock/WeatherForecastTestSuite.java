@@ -64,12 +64,8 @@ class WeatherForecastTestSuite {
 	void testAverageTemperature() {
 		//Given
 		WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
-		double sum = 0;
-		for (Double temperature : temperaturesMap.values()) {
-			sum += temperature;
-		}
+
 		//When
-		double expectedAverage = sum / temperaturesMap.size();
 		double actualAverage = weatherForecast.calculateAverageTemperature();
 
 		//Then

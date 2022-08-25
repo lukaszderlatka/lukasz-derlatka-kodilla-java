@@ -14,9 +14,6 @@ public class WeatherForecast {
 
 		for (Map.Entry<String, Double> temperature :
 				temperatures.getTemperatures().entrySet()) {
-
-			// adding 1 celsius degree to current value
-			// as a temporary weather forecast
 			resultMap.put(temperature.getKey(), temperature.getValue() + 1.0);
 		}
 		return resultMap;
@@ -38,13 +35,11 @@ public class WeatherForecast {
 		}
 		Collections.sort(temperatureDataset);
 		if(temperatureDataset.size() % 2 == 0) {
-			double temperatureDatasetSum = (double) (temperatureDataset.get(temperatureDataset.size()/2)
-								+ temperatureDataset.get(temperatureDataset.size()/2));
-			medianValue = temperatureDatasetSum / 2;
-
-		} else {
-			medianValue = temperatureDataset.get(temperatureDataset.size()/2);
+			int index = temperatureDataset.size() / 2;
+			double temperatureDatasetSum = (temperatureDataset.get(index - 1)
+								+ temperatureDataset.get(index));
+			return temperatureDatasetSum / 2;
 		}
-		return medianValue;
+		return temperatureDataset.get(temperatureDataset.size() / 2);
 	}
 }
