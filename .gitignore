@@ -6,7 +6,6 @@ build/
 !**/src/test/**/build/
 **/out/
 **/build/
-**/forum/
 **/weather/
 
 ### STS ###
