@@ -7,5 +7,4 @@ public class PoemBeautifier {
 		System.out.println(output);
 		return output;
 	}
-
 }
