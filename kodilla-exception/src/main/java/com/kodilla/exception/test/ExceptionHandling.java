@@ -5,13 +5,13 @@ public class ExceptionHandling {
 	public static void main(String[] args) {
 
 		SecondChallenge secondChallenge = new SecondChallenge();
-		double x = 3;
+		double x = 1;
 		double y = 2;
 		String tryCatch = "";
 		String result;
 
 		try {
-			secondChallenge.probablyIWillThrowException(x,y);
+			System.out.println(secondChallenge.probablyIWillThrowException(x,y));
 			tryCatch = "try";
 		} catch (Exception e) {
 			System.out.println("\nException details: " + e);
